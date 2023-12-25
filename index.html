@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Book Information
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label for="id">Book Id</label>
+                        <input type="text" id="id" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="isbn">ISBN</label>
+                        <input type="number" id="isbn" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="genre">Genre</label>
+                        <input type="text" id="genre" class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label for="publishedYear">Published Year</label>
+                        <input type="number" id="publishedYear" class="form-control" />
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <button type="button"
+                                    id="SaveBook"
+                                    class="btn btn-primary"
+                                    onclick="SaveBook()">
+                                Add
+                            </button>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row" id="tblist">
+        <table class="table table-bordered table-striped table-responsive">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th>Genre</th>
+                    <th>Published Year</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="book"></tbody>
+        </table>
+    </div>
+    <div class="panel-footer">
+        <div id="index" class="center-block">
+           
+        </div>
+    </div>
+</body>
+<script>
+    fetch("https://localhost:44347/api/Values/");
+</script>
+<script src="jquery.js"></script>
+<script src="book.js"></script>
+</html>
